@@ -1,0 +1,27 @@
+<div class="">
+  <h3> Beers:</h3>
+
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Batch</th>
+        <th scope="col">Name</th>
+        <th scope="col">Style</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="beer in ctrl.allbeers | orderBy:'-'"
+        ui-sref="batch({batchNum: beer.batch})">
+        <td>{{beer.batch}}</td>
+        <td>{{beer.name}}</td>
+        <td>{{beer.style}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <ul type="none">
+    <li ng-repeat="beer in ctrl.allbeers track by $index">
+      {{beer.batch}} {{beer.name}} {{beer.style}}
+    </li>
+  </ul>
+
+</div>
