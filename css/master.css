@@ -4,3 +4,9 @@
   height: 184px;
   margin: 10px 15px 10px 0;
 }
+@font-face {
+  font-family: "OldMacDonald";
+  src: url("../fonts/OldMacDonaldFont.otf") format("opentype");
+}
+
+#header-nav { font-family: OldMacDonald;}
