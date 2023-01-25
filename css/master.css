@@ -15,7 +15,7 @@
 
   /* width: 184px;
   height: 184px;  */
-  margin: -50px 20px 10px -30px;
+  margin: -50px 20px 10px 0px;
 }
 
 #header-nav { font-family: OldMacDonald;
@@ -48,7 +48,7 @@
 
 #nav-list span {
   font-family: OldMacDonaldIcons;
-  font-size: 5em;
+  font-size: 3em;
   color: #492900;
 }
 #nav-list {
