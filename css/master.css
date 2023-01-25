@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "OldMacDonald";
+  src: url("../fonts/OldMacDonaldFont.otf") format("opentype");
+}
+@font-face {
+  font-family: "OldMacDonaldIcons";
+  src: url("../fonts/OldMacDonaldIcons.otf") format("opentype");
+}
+
 #logo-img {
   /* background: url('../img/logo_small.png') no-repeat; */
   font-family: OldMacDonaldIcons;
@@ -8,17 +17,10 @@
   height: 184px;  */
   margin: -50px 20px 10px -30px;
 }
-@font-face {
-  font-family: "OldMacDonald";
-  src: url("../fonts/OldMacDonaldFont.otf") format("opentype");
-}
-@font-face {
-  font-family: "OldMacDonaldIcons";
-  src: url("../fonts/OldMacDonaldIcons.otf") format("opentype");
-}
 
 #header-nav { font-family: OldMacDonald;
   background-color: #fff5d7;
+
 }
 .navbar-brand {
   padding-top: 25px;
@@ -40,10 +42,19 @@
 .navbar-brand span {
   color: #492900;
 }
-#nav-list {
+.navbar-default .navbar-nav>li>a {
   color: #492900;
 }
 
+#nav-list span {
+  font-family: OldMacDonaldIcons;
+  font-size: 5em;
+  color: #492900;
+}
+#nav-list {
+  font-size: 2em;
+  text-align: center;
+}
 
 .navbar-brand a:hover, .navbar-brand a:focus {
   text-decoration: none;
@@ -51,4 +62,7 @@
 
 .navbar-header > a:hover, .navbar-header a:focus {
   text-decoration: none;
+}
+h2 , h3 {
+  font-family: OldMacDonald;
 }
