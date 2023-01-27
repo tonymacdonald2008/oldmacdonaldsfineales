@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: "OldMacDonaldIcons";
-  src: url("../fonts/OldMacDonaldIcons.otf") format("opentype");
+  src: url("../fonts/font1142.otf") format("opentype");
 }
 
 #logo-img {
@@ -48,7 +48,7 @@
 
 #nav-list span {
   font-family: OldMacDonaldIcons;
-  font-size: 3em;
+  font-size: 2em;
   color: #492900;
 }
 #nav-list {
