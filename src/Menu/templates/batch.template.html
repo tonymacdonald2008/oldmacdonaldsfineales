@@ -1,11 +1,17 @@
-<div class="">
-  <h3> Batch: {{ctrl.batch.batch}}</h3>
-  <h4> {{ctrl.batch.name}}</h4>
-  <h4>Style: {{ctrl.batch.style}}</h4>
-  <h4>Brewed on: {{ctrl.batch.brewdate}}</h4>
-  <h4>Bottled on: {{ctrl.batch.bottledate}}</h4>
-  <h4>Original gravity: {{ctrl.batch.og}}</h4>
-  <h4>Final gravity: {{ctrl.batch.fg}}</h4>
-  <h4>ABV estimate: </h4>
-  <h4>Notes: {{ctrl.batch.notes}}</h4>
+<div class="container">
+  <a ng-if="ctrl.batch.previous" ui-sref="batch({batchNum: ctrl.batch.previous})">< previous</a>
+  <a ng-if="ctrl.batch.next" ui-sref="batch({batchNum: ctrl.batch.next})">next ></a>
+  <div class="">
+    <h3> Batch: {{ctrl.batch.batch}}</h3>
+    <h4> {{ctrl.batch.name}}</h4>
+    <h4>Style: {{ctrl.batch.style}}</h4>
+    <h4>Brewed on: {{ctrl.batch.brewdate}}</h4>
+    <h4>Bottled on: {{ctrl.batch.bottledate}}</h4>
+    <h4>Original gravity: {{ctrl.batch.og}}</h4>
+    <h4>Final gravity: {{ctrl.batch.fg}}</h4>
+    <h4 ng-if="(ctrl.batch.og && ctrl.batch.fg)">ABV estimate: {{ctrl.abv()}} </h4>
+    <h4>Notes: {{ctrl.batch.notes}}</h4>
+  </div>
+
+
 </div>

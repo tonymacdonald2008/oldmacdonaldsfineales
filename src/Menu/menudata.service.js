@@ -22,7 +22,16 @@
         method: 'GET',
         url: "data/batchinfo.csv"
       }).then(function (response){
-        return parseCSV(response.data)[batchNum];
+        var batch_info = parseCSV(response.data);
+        var batch_detail = batch_info[batchNum];
+        var batch_number = parseInt(batchNum);
+        if (batchNum > 1){
+          batch_detail.previous = (batch_number - 1);
+        }
+        if (batchNum < batch_info.length - 1){
+          batch_detail.next = (batch_number + 1);
+        }
+        return batch_detail;
       });
     }
 
