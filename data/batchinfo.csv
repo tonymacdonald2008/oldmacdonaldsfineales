@@ -48,7 +48,7 @@ batch,name,style,brewdate,bottledate,og,fg,notes
 47,Big Nerd Ranch Commemoreative Ale,IPA,19/04/2021,03/05/2021,1.046,1.008,Nortel/BNR alumni will recognize this as a reference to the class A IP Address range 47.x.x.x assigned to bnr.ca and ultimately sold to Microsoft after the break-up of Nortel.
 48,1st Wheat Beer,Wheat Beer,24/05/2021,07/06/2021,1.046,1.008,
 49,N E IPA,IPA,31/05/2021,14/06/2021,1.052,1.008,
-50,English Style Pale Ale,Pale Ale,02/08/2021,,1.056,1.014,
+50,English Style Pale Ale,Pale Ale,02/08/2021,16/08/2021,1.056,1.014,
 51,American Pale Ale,APA,09/08/2021,22/08/2021,1.044,1.008,
 52,Wheat Beer # 2,Wheat Beer,13/09/2021,26/09/2021,1.038,1.006,
 53,Election Day English Pale Ale,Pale Ale,20/09/2021,04/10/2021,1.048,1.010,Clares 5th Birthday - missed a good name
@@ -63,7 +63,7 @@ batch,name,style,brewdate,bottledate,og,fg,notes
 62,English Style Pale Ale,Pale Ale,07/11/2022,21/11/2022,1.038,1.010,Dry hopped with homegrown fuggles
 63,Wheat Beer # 3,Wheat Beer,05/12/2022,19/12/2022,1.032,1.006,
 64,SMASH American Pale Ale,APA,16/01/2023,30/01/2023,1.040,1.010,
-65,Saison Take 3,Saison,23/01/2023,,1.048,,
+65,Saison Take 3,Saison,23/01/2023,05/02/2023,1.048,1.008,
 66,,,,,,,
 67,,,,,,,
 68,,,,,,,
