@@ -11,24 +11,32 @@
     service.getBatchInfo = function () {
       return $http({
         method: 'GET',
-        url: "data/batchinfo.csv"
+        url: "https://oldmacdonaldsfineales-default-rtdb.firebaseio.com/data/batch_info.json"
       }).then(function (response){
-        return parseCSV(response.data);
+        return response.data;
       });
     }
 
     service.getBatchDetail = function (batchNum) {
       return $http({
         method: 'GET',
-        url: "data/batchinfo.csv"
+        url: "https://oldmacdonaldsfineales-default-rtdb.firebaseio.com/data/batch_info/" + batchNum+".json"
+
       }).then(function (response){
-        var batch_info = parseCSV(response.data);
-        var batch_detail = batch_info[batchNum];
-        var batch_number = parseInt(batchNum);
-        if (batchNum > 1){
-          batch_detail.previous = (batch_number - 1);
-        }
-        if (batchNum < batch_info.length - 1){
+        var batch_detail = response.data;
+        // deal with case of non-existent bath
+        if (batch_detail){
+          // decode the method from basee64
+          var rawMethod = batch_detail.recipe?.method;
+          // if(rawMethod){
+          //   batch_detail.recipe.method = atob(rawMethod);
+          // }
+
+          var batch_number = parseInt(batchNum);
+          if (batchNum > 1){
+            batch_detail.previous = (batch_number - 1);
+          }
+          // no good way to know if we are on the last batch
           batch_detail.next = (batch_number + 1);
         }
         return batch_detail;
@@ -41,7 +49,7 @@
         method: 'GET',
         url: "data/merch.json"
       }).then(function (response){
-        return response.data;
+        return response.data.merch;
       });
     }
 
@@ -50,7 +58,7 @@
         method: 'GET',
         url: "data/merch.json"
       }).then(function (response){
-        return response.data.find(x => x.title === itemname);
+        return response.data.merch.find(x => x.title === itemname);
       });
     }
 
