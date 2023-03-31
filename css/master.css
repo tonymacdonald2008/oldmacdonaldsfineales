@@ -68,3 +68,6 @@
 h2 , h3 {
   font-family: OldMacDonald;
 }
+.nobullets {
+  list-style-type: none;
+}

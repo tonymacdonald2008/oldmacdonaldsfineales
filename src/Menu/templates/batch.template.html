@@ -14,7 +14,7 @@
     <div ng-if="ctrl.batch.recipe">
       <h4>Recipe:</h4>
       <h5>Ingredients</h5>
-      <ul ng-repeat="item in ctrl.batch.recipe.ingredients">
+      <ul ng-repeat="item in ctrl.batch.recipe.ingredients" class ="nobullets">
         <li>{{item.qty}} {{item.item}} <span ng_if="item.note">({{item.note}})</span></li>
       </ul>
       <div class="" ng-if="ctrl.batch.recipe.method">
