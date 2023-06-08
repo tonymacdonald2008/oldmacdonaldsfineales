@@ -6,36 +6,30 @@
   font-family: "OldMacDonaldIcons";
   src: url("../fonts/font905.otf") format("opentype");
 }
+#header-nav {
+  font-family: OldMacDonald;
+  background-color: #fff5d7;
+  height: auto;
+  min-height: 180px;
 
+}
 #logo-img {
-  /* background: url('../img/logo_small.png') no-repeat; */
   font-family: OldMacDonaldIcons;
   font-size: 12em;
   color: #492900;
 
-  /* width: 184px;
-  height: 184px;  */
-  margin: -32px 20px 10px 0px;
+  margin: -32px 20px 0px 0px;
 }
 
-#header-nav {
-  font-family: OldMacDonald;
-  background-color: #fff5d7;
-  min-height: 180px;
-
-}
 .navbar-brand {
   padding-top: 25px;
+  height: auto;
 }
-.navbar-brand h1,h3 { /* Restaurant name */
-  /* font-family: 'Lora', serif;*/
+.navbar-brand h1,h3 {
   color: #492900;
-  text-transform: uppercase;
   font-weight: bold;
-  /* text-shadow: 1px 1px 1px #222; */
   margin-top: 0;
   margin-bottom: 0;
-  /* line-height: .75; */
 }
 .navbar-brand h3 {
   font-weight: normal;
