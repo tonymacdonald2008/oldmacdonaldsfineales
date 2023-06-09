@@ -1,20 +1,20 @@
 {"merch":
   [
-    {"title":"Coasters",
-      "short_description":"Wooden Coaster",
-      "description":"A wooden coaster engraved with the Old MacDonald's Fine Ales image."
-    },
-    {"title":"Cases",
+    {"title":"Case",
       "short_description":"Wooden case for 12 bottles",
       "description":"A wooden case engraved with the Old MacDonald's Fine Ales image."
     },
-    {"title":"Shirts",
-      "short_description":"T-shirt",
-      "description":"A cotton t-shirt block printed with the Old MacDonald's Fine Ales image."
+    {"title":"Coaster",
+      "short_description":"Wooden Coaster",
+      "description":"A wooden coaster engraved with the Old MacDonald's Fine Ales image."
     },
-    {"title":"Glasses",
+    {"title":"Glass",
       "short_description":"Pint beer glass",
       "description":"Pint beer glass engraved with the Old MacDonald's Fine Ales image."
+    },
+    {"title":"Shirt",
+      "short_description":"T-shirt",
+      "description":"A cotton t-shirt block printed with the Old MacDonald's Fine Ales image."
     }
   ]
 }
