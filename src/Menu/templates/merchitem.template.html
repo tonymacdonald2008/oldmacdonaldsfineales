@@ -1,5 +1,14 @@
 <div class="">
   <h3> {{ctrl.item.title}}</h3>
   <h4> {{ctrl.item.description}}</h4>
-  <img src="./img/low-res/{{ctrl.item.title}}1.jpg" alt="{{ctrl.item.title}}" style="width:400px;">
+  <a href="#"></a>
+  <img
+    srcset="./img/low-res/{{ctrl.item.title}}1.jpg 400w,
+    ./img/med-res/{{ctrl.item.title}}1-mr.jpg 600w,
+    ./img/high-res/{{ctrl.item.title}}1-hr.jpg 1080w"
+    sizes="(max-width: 600px) 400px,
+    (max-width: 768px) 600px,
+          1080px"
+    src="./img/low-res/{{ctrl.item.title}}1.jpg"
+    alt="{{ctrl.item.title}}" />
 </div>
