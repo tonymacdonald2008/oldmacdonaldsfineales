@@ -10,26 +10,30 @@
   font-family: OldMacDonald;
   background-color: #fff5d7;
   height: auto;
-  min-height: 180px;
+  min-height: 100px;
 
 }
 #logo-img {
   font-family: OldMacDonaldIcons;
-  font-size: 12em;
+  font-size: 11em;
   color: #492900;
 
-  margin: -32px 20px 0px 0px;
+  margin: 20px 20px 20px 0px;
 }
 
 .navbar-brand {
   padding-top: 25px;
   height: auto;
 }
-.navbar-brand h1,h3 {
+.navbar-brand h1,h2,h3 {
+  font-family: OldMacDonald;
   color: #492900;
-  font-weight: bold;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.navbar-brand h1 {
+  font-weight: bold;
 }
 .navbar-brand h3 {
   font-weight: normal;
@@ -56,12 +60,7 @@
   text-decoration: none;
 }
 
-.navbar-header > a:hover, .navbar-header a:focus {
-  text-decoration: none;
-}
-h2 , h3 {
-  font-family: OldMacDonald;
-}
+
 .nobullets {
   list-style-type: none;
 }
