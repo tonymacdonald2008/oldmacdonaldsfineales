@@ -55,6 +55,32 @@
   font-size: 2em;
   text-align: center;
 }
+.label-box {
+  outline: 1px solid;
+  aspect-ratio: 1.25 / 1;
+  font-family: OldMacDonald;
+  font-size: 1.5em;
+}
+.front-label {
+  padding: 10px;
+
+}
+#front-label img {
+  width: 100%;
+  object-fit: contain;
+}
+.column {
+  float: left;
+}
+.field-label {
+  width: 13%;
+}
+.field-value {
+  width: 20%;
+}
+.field-value-wide {
+  width: 53%;
+}
 
 .navbar-brand a:hover, .navbar-brand a:focus {
   text-decoration: none;

@@ -11,6 +11,7 @@
     <h4>Final gravity: {{ctrl.batch.fg}}</h4>
     <h4 ng-if="(ctrl.batch.og && ctrl.batch.fg)">ABV estimate: {{ctrl.abv()}} </h4>
     <h4>Notes: {{ctrl.batch.notes}}</h4>
+    <a ui-sref="label({batchNum: ctrl.batch.batch})">view label</a>
     <div ng-if="ctrl.batch.recipe">
       <h4>Recipe:</h4>
       <h5>Ingredients</h5>
@@ -22,8 +23,6 @@
         <span id="BatchRecipeMethod" ng-repeat="step in ctrl.batch.recipe.method"> {{step}}<br></span>
       </div>
     </div>
-
   </div>
-
 
 </div>
