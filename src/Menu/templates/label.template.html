@@ -5,10 +5,12 @@
     <h3> Batch: {{ctrl.batch.batch}}</h3>
     <h4> {{ctrl.batch.name}}</h4>
     <h4>{{ctrl.batch.untappdref}}</h4>
-    <div class="row">
+    <!-- Trigger button -->
+<button ng-click="generatePDF()">Print sheet of labels</button>
+    <div class="row" id="PrintableLabels">
       <div class="col-xs-6 label-box" id="front-label">
         <div class="front-label">
-          <img src="../../img/wideimage.png" alt="widimage">
+          <img src="../../img/widelabelimage.png" alt="widimage">
           <div class="row">
             <div class="column field-label">
               Name:
@@ -36,17 +38,27 @@
             <div class="column field-value">
               {{ctrl.batch.brewdate}}
             </div>
-          </div>          
+          </div>
         </div>
 
       </div>
       <div class="col-xs-6 label-box">
-        <div class="row">
-          <div class="col-xs-3" id="batchQRcode">
-            <h4>Old MacDonald's Fine Ales</h4>
-          </div>
-          <div class="col-xs-3" id="untappdBatchQRcode">
-            <h4>This beer on Untappd</h4>
+        <div class="back-label">
+          <div class="row label-content">
+            <div class="col-xs-6" >
+              <div class="qrcode" id="batchQRcode">
+              </div>
+              <div class="">
+                <h4>Recipe and other details on OMFA website</h4>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="qrcode" id="untappdBatchQRcode">
+              </div>
+              <div class="">
+                <h4>Check in on Untappd</h4>
+              </div>
+            </div>
           </div>
         </div>
       </div>
