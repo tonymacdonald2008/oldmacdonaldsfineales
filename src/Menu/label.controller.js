@@ -14,16 +14,16 @@
       let untappdurl = "https://untappd.com/qr/beer/" + thebatch.untappdref;
       new QRCode(document.getElementById("batchQRcode"), {
           text: batchurl,
-          width: 128,
-          height: 128,
+          width: 160,
+          height: 160,
           colorDark : "#000000",
           colorLight : "#ffffff",
           correctLevel : QRCode.CorrectLevel.H
       });
       new QRCode(document.getElementById("untappdBatchQRcode"), {
           text: untappdurl,
-          width: 128,
-          height: 128,
+          width: 160,
+          height: 160,
           colorDark : "#000000",
           colorLight : "#ffffff",
           correctLevel : QRCode.CorrectLevel.H
@@ -32,11 +32,11 @@
     }
     $scope.generatePDF = function(){
       console.log("generatePDF");
-      var filename = "batch" + ctrl.batch.batch + "labels.pdf"
+      var filename = "labels-batch-" + ctrl.batch.batch + ".pdf"
       var divHeight = $('#PrintableLabels').height();
       var divWidth = $('#PrintableLabels').width();
       var ratio = divHeight / divWidth;
-      html2canvas(document.getElementById("PrintableLabels",{scale: 4}),
+      html2canvas(document.getElementById("PrintableLabels",{scale: 8}),
          ).then(function(canvas) {
            console.log("in onrendered");
               var image = canvas.toDataURL("image/jpeg");
@@ -50,25 +50,6 @@
               }
               doc.save(filename); //Download the rendered PDF.
 
-      });
-    }
-    $scope.printit = function(){
-      console.log("got here");
-      var doc = new jsPDF();
-      // Source HTMLElement or a string containing HTML.
-      var elementHTML = document.querySelector("#PrintableLabels");
-
-      doc.html(elementHTML, {
-          callback: function(doc) {
-              // Save the PDF
-              doc.save('document-html.pdf');
-          },
-          margin: [10, 10, 10, 10],
-          autoPaging: 'text',
-          x: 0,
-          y: 0,
-          width: 190, //target width in the PDF document
-          windowWidth: 1170 //window width in CSS pixels
       });
     }
   }

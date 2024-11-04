@@ -68,7 +68,7 @@
   outline: 1px solid;
   aspect-ratio: 1.25 / 1;
   font-family: OldMacDonald;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: bold;
   border-style: solid;
   border-width: 1px;
@@ -101,11 +101,14 @@
 .label-content {
   margin: 0;
   position: absolute;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .qrcode {
-  width: 128px;
-  height: 128px;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  padding: 20px;
 }

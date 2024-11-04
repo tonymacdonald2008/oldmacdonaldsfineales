@@ -5,10 +5,9 @@
     <h3> Batch: {{ctrl.batch.batch}}</h3>
     <h4> {{ctrl.batch.name}}</h4>
     <h4>{{ctrl.batch.untappdref}}</h4>
-    <!-- Trigger button -->
-<button ng-click="generatePDF()">Print sheet of labels</button>
+
     <div class="row" id="PrintableLabels">
-      <div class="col-xs-6 label-box" id="front-label">
+      <div class="col-md-6 label-box">
         <div class="front-label">
           <img src="../../img/widelabelimage.png" alt="widimage">
           <div class="row">
@@ -42,21 +41,21 @@
         </div>
 
       </div>
-      <div class="col-xs-6 label-box">
+      <div class="col-md-6 label-box">
         <div class="back-label">
           <div class="row label-content">
             <div class="col-xs-6" >
               <div class="qrcode" id="batchQRcode">
               </div>
               <div class="">
-                <h4>Recipe and other details on OMFA website</h4>
+                View recipe and other details on OMFA website
               </div>
             </div>
             <div class="col-xs-6">
               <div class="qrcode" id="untappdBatchQRcode">
               </div>
               <div class="">
-                <h4>Check in on Untappd</h4>
+                Check in on Untappd
               </div>
             </div>
           </div>
@@ -64,4 +63,6 @@
       </div>
     </div>
   </div>
+  <!-- Trigger button -->
+  <button ng-click="generatePDF()">Print sheet of labels</button>
 </div>
