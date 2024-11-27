@@ -40,7 +40,7 @@
          ).then(function(canvas) {
            console.log("in onrendered");
               var image = canvas.toDataURL("image/jpeg");
-              var doc = new jsPDF({orientation: 'p', format: 'letter'}); // using defaults: orientation=portrait, unit=mm, size=A4
+              var doc = new jsPDF({orientation: 'p', format: 'letter'}); // using defaults: orientation=portrait, unit=mm, size=letter
               var width = doc.internal.pageSize.getWidth();
               var height = doc.internal.pageSize.getHeight();
               height = ratio * width;
