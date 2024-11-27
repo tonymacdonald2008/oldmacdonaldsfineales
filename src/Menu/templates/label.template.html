@@ -1,0 +1,68 @@
+<div class="container">
+
+  <a ui-sref="batch({batchNum: ctrl.batch.batch})">back to batch info ></a>
+  <div class="">
+    <h3> Batch: {{ctrl.batch.batch}}</h3>
+    <h4> {{ctrl.batch.name}}</h4>
+    <h4>{{ctrl.batch.untappdref}}</h4>
+
+    <div class="row" id="PrintableLabels">
+      <div class="col-md-6 label-box">
+        <div class="front-label">
+          <img src="../../img/widelabelimage.png" alt="widimage">
+          <div class="row">
+            <div class="column field-label">
+              Name:
+            </div>
+            <div class="column field-value-wide">
+              {{ctrl.batch.name}}
+            </div>
+            <div class="column field-label">
+              Batch:
+            </div>
+            <div class="column field-value">
+              {{ctrl.batch.batch}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="column field-label">
+              style:
+            </div>
+            <div class="column field-value-wide">
+              {{ctrl.batch.style}}
+            </div>
+            <div class="column field-label">
+              Brewed:
+            </div>
+            <div class="column field-value">
+              {{ctrl.batch.brewdate}}
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6 label-box">
+        <div class="back-label">
+          <div class="row label-content">
+            <div class="col-xs-6" >
+              <div class="qrcode" id="batchQRcode">
+              </div>
+              <div class="">
+                View recipe and other details on OMFA website
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="qrcode" id="untappdBatchQRcode">
+              </div>
+              <div class="">
+                Check in on Untappd
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Trigger button -->
+  <button class="hidden-xs hidden-sm" ng-click="generatePDF()">Print sheet of labels</button>
+</div>

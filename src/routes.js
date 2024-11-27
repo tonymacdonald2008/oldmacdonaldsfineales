@@ -59,11 +59,24 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     }
   })
 
-  // Item detail
-  .state('batch', {
-    url: '/batch/{batchNum}',
-    templateUrl: 'src/Menu/templates/batch.template.html',
-    controller: 'BatchController as ctrl',
+    // batch info
+    .state('batch', {
+      url: '/batch/{batchNum}',
+      templateUrl: 'src/Menu/templates/batch.template.html',
+      controller: 'BatchController as ctrl',
+      resolve: {
+        thebatch:
+        ['$stateParams','MenuDataService', function ($stateParams, MenuDataService) {
+          return MenuDataService.getBatchDetail($stateParams.batchNum);
+        }]
+      }
+    })
+
+  // label info
+  .state('label', {
+    url: '/label/{batchNum}',
+    templateUrl: 'src/Menu/templates/label.template.html',
+    controller: 'LabelController as ctrl',
     resolve: {
       thebatch:
       ['$stateParams','MenuDataService', function ($stateParams, MenuDataService) {
