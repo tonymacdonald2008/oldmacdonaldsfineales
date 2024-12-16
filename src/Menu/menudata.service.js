@@ -20,11 +20,11 @@
     service.getBatchDetail = function (batchNum) {
       return $http({
         method: 'GET',
-        url: "https://oldmacdonaldsfineales-default-rtdb.firebaseio.com/data/batch_info/" + batchNum+".json"
+        url: "https://oldmacdonaldsfineales-default-rtdb.firebaseio.com/data/batch_info/"+batchNum+".json"
 
       }).then(function (response){
         var batch_detail = response.data;
-        // deal with case of non-existent bath
+        // deal with case of non-existent batch
         if (batch_detail){
           // decode the method from basee64
           var rawMethod = batch_detail.recipe?.method;
@@ -43,6 +43,26 @@
       });
     }
 
+    service.getRecipe = function (batchNum) {
+      var recipe = {batch: batchNum};
+      //get ingredients
+      return $http({
+        method: 'GET',
+        url: "https://oldmacdonaldsfineales-default-rtdb.firebaseio.com/data/recipe_info/ingredient_lists/"+batchNum+"/ingredients.json"
+
+      }).then(function (response){
+        recipe.ingredients = response.data;
+        return $http({
+          method: 'GET',
+          url: "https://oldmacdonaldsfineales-default-rtdb.firebaseio.com/data/recipe_info/methods/" + batchNum+"/method/.json"
+      });
+    }).then(function (response){
+      recipe.method = response.data;
+      // deal with case of non-existent batch
+      console.log(recipe);
+      return recipe;
+    });
+    }
 
     service.getMerchInfo = function () {
       return $http({

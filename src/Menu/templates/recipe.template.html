@@ -1,0 +1,14 @@
+
+<div class="">
+  <div >
+    <h4>Recipe:</h4>
+    <h5>Ingredients</h5>
+    <ul ng-repeat="item in ctrl.recipe.ingredients" class ="nobullets">
+      <li>{{item.qty}} {{item.item}} <span ng_if="item.note">({{item.note}})</span></li>
+    </ul>
+    <div class="" ng-if="ctrl.recipe.method">
+      <h5>Method:</h5>
+      <span id="BatchRecipeMethod" ng-repeat="step in ctrl.recipe.method"> {{step}}<br></span>
+    </div>
+  </div>
+</div>
