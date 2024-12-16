@@ -72,6 +72,19 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
       }
     })
 
+    // recipe info
+    .state('batch.recipe', {
+      url: '/recipe',
+      templateUrl: 'src/Menu/templates/recipe.template.html',
+      controller: 'RecipeController as ctrl',
+      resolve: {
+        recipe:
+        ['$stateParams','MenuDataService', function ($stateParams, MenuDataService) {
+          return MenuDataService.getRecipe($stateParams.batchNum);
+        }]
+      }
+    })
+
   // label info
   .state('label', {
     url: '/label/{batchNum}',
